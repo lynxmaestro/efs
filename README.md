@@ -1,4 +1,4 @@
-# efs
+# Elastic File System
 Mounting an EFS on multiple ec2-instances EFS Share and EBS Volume is the name for both usage <br/>
 EFS is a file level storage, which can be attached to multiple instances at a time, but EBS instances can only be attached to a single instance at a time.<br/>
 EBS can be considered as a harddisk while EFS can be considered as a shared folder. EBS Max size is 16TB and EFS size is 8 Exabyte ( 1000 Petabytes ). <br/>
@@ -15,3 +15,7 @@ Performance settings : Where the communication between Ec2 and EFS ie the data e
 Security group used in EFS should allow NFS port as this is the protocol used by EFS. (2049) 
 
 # Create and Ec2 instance and prepare the Docroot and mount the EFS volume
+Create an instance which neccessary packages installed on the instance including apache , php etc. <br/>
+The apache document root should be mounted to EFS storage so that multiple instances can be mounted to the same EFS volume. <br/>
+
+# Create an ASG and attach a load balancer 
